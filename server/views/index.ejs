@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loopback-example-model-relations</title>
+  </head>
+  <body>
+    <h1>loopback-example-model-relations</h1>
+    <p>
+      <a href="/explorer">API Explorer</a>
+    </p>
+    <h2>API</h2>
+    <ul>
+      <li><a href='/api/customers'>/api/customers</a>
+      <li><a href='/api/customers?filter[fields][name]=true'>/api/customers?filter[fields][name]=true</a>
+      <li><a href='/api/customers/1'>/api/customers/1</a>
+      <li><a href='/api/customers/youngFolks'>/api/customers/youngFolks</a>
+      <li><a href='/api/customers/1/reviews'>/api/customers/1/reviews</a>
+      <li><a href='/api/customers/1/orders'>/api/customers/1/orders</a>
+      <li><a href='/api/customers?filter[include]=reviews'>/api/customers?filter[include]=reviews</a>
+      <li><a href='/api/customers?filter[include][reviews]=author'>/api/customers?filter[include][reviews]=author</a>
+      <li><a href='/api/customers?filter[include][reviews]=author&filter[where][age]=21'>/api/customers?filter[include][reviews]=author&filter[where][age]=21</a>
+      <li><a href='/api/customers?filter[include][reviews]=author&filter[limit]=2'>/api/customers?filter[include][reviews]=author&filter[limit]=2</a>
+      <li><a href='/api/customers?filter[include]=reviews&filter[include]=orders'>/api/customers?filter[include]=reviews&filter[include]=orders</a>
+    </ul>
+  </body>
+</html>
