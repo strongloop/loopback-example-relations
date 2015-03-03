@@ -1,7 +1,7 @@
 #loopback-example-model-relations
 
 ```
-git clone git@github.com:strongloop/loopback-example-model-relations.git
+git clone https://github.com/strongloop/loopback-example-model-relations.git
 cd loopback-example-model-relations
 npm install
 slc run
