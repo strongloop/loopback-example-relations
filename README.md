@@ -37,7 +37,7 @@ inserted data via REST.
 
 ##Procedure
 
-###1. Create the application
+###Create the application
 
 ####Application information
 
@@ -50,7 +50,7 @@ slc loopback loopback-example-model-relations
 cd loopback-example-model-relations
 ```
 
-###2. Create the models
+###Create the models
 
 ####Model information
 
@@ -96,7 +96,7 @@ slc loopback:model Customer
 ... # follow the prompts, repeat for `Review` and `Order` models
 ```
 
-###3. Configure server-side views
+###Configure server-side views
 
 > LoopBack comes preconfigured with EJS out-of-box. This means we can use
 > server-side templating by simply setting the proper view engine and a
@@ -113,9 +113,9 @@ Add [server-side templating configurations to `server.js`](/server/server.js#L11
 Create [`index.ejs` in the views directory](/server/views/index.ejs).
 
 [Configure `server.js`](/server/server.js#L11-L20) to use server-side
-templating. Remember to import the [`path`](/server/server.js#L3) package
+templating. Remember to import the [`path`](/server/server.js#L3) package.
 
-###4. Add sample data
+###Add sample data
 
 Create three boot scripts:
 
@@ -123,7 +123,7 @@ Create three boot scripts:
 - [`sample-orders.js`](/server/boot/sample-orders.js)
 - [`sample-reviews.js`](/server/boot/sample-reviews.js)
 
-###5. Create model relations
+###Create model relations
 
 ####Model relation information
 
@@ -158,10 +158,10 @@ slc loopback:relation
 > LoopBack [automatically derives](http://docs.strongloop.com/display/LB/BelongsTo+relations#BelongsTorelations-Overview)
 > relation and foreign key names when you leave the values empty.
 
-###6. Try the API
+###Try the API
 
-Start the application via `slc run` and browse to [`localhost:3000`][localhost]
-and you should see various links. Each endpoint is defined as follows:
+Start the application with `node .` and browse to [`localhost:3000`][localhost].
+You should see various links. Each endpoint is defined as follows:
 
 - [/api/customers](http://localhost:3000/api/customers)
   - List all customers
@@ -185,11 +185,6 @@ and you should see various links. Each endpoint is defined as follows:
   - List first two customers including their reviews which also include the author
 - [/api/customers?filter[include]=reviews&filter[include]=orders](http://localhost:3000/api/customers?filter[include]=reviews&filter[include]=orders)
   - List all customers including their reviews and orders
-
-###7. Conclusion
-
-You've successfully built an app that defines model relations in LoopBack. For
-more information, see the [official LoopBack model relation documentation](http://docs.strongloop.com/display/LB/Define+model+relations).
 
 ---
 
