@@ -1,4 +1,4 @@
-#loopback-example-model-relations
+#loopback-example-relations
 
 ```
 git clone https://github.com/strongloop/loopback-example-relations
