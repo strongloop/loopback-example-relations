@@ -1,10 +1,10 @@
 #loopback-example-model-relations
 
 ```
-git clone https://github.com/strongloop/loopback-example-model-relations.git
+git clone https://github.com/strongloop/loopback-example-model-relations
 cd loopback-example-model-relations
 npm install
-slc run
+node .
 ```
 
 In this example, we create a simple web application to demonstrate basic model
