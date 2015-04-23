@@ -1,7 +1,7 @@
 #loopback-example-relations
 
 ```
-git clone https://github.com/strongloop/loopback-example-relations
+git clone https://github.com/strongloop/loopback-example-relations.git
 cd loopback-example-model-relations
 npm install
 node .
