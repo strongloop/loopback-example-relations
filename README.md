@@ -1,10 +1,10 @@
 #loopback-example-relations
 
 ```
-git clone https://github.com/strongloop/loopback-example-relations.git
-cd loopback-example-model-relations
-npm install
-node .
+$ git clone https://github.com/strongloop/loopback-example-relations.git
+$ cd loopback-example-model-relations
+$ npm install
+$ node .
 ```
 
 In this example, we create a simple web application to demonstrate basic model
@@ -45,9 +45,9 @@ inserted data via REST.
 - Directory to contain the project: `loopback-example-model-relations`
 
 ```
-slc loopback loopback-example-model-relations
+$ slc loopback loopback-example-model-relations
 ... # follow the prompts
-cd loopback-example-model-relations
+$ cd loopback-example-model-relations
 ```
 
 ###Create the models
@@ -92,7 +92,7 @@ cd loopback-example-model-relations
       - Not Required
 
 ```
-slc loopback:model Customer
+$ slc loopback:model Customer
 ... # follow the prompts, repeat for `Review` and `Order` models
 ```
 
@@ -105,7 +105,7 @@ slc loopback:model Customer
 Create a [`views` directory](/server/views) to store server-side templates.
 
 ```
-mkdir server/views
+$ mkdir server/views
 ```
 
 Add [server-side templating configurations to `server.js`](/server/server.js#L11-L20).
@@ -148,7 +148,7 @@ Create three boot scripts:
       - Custom foreign key: *Leave blank*
 
 ```
-slc loopback:relation
+$ slc loopback:relation
 ? Select the model to create the relationship from:
 ...
 > Customer
