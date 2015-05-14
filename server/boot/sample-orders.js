@@ -2,27 +2,31 @@ module.exports = function(app) {
   app.dataSources.db.automigrate('Order', function(err) {
     if (err) throw err;
 
-    var orders = [
-      {description: 'Order A', total: 200.45, customerId: 1},
-      {description: 'Order B', total: 100,    customerId: 1},
-      {description: 'Order C', total: 350.45, customerId: 1},
-      {description: 'Order D', total: 150.45, customerId: 2},
-      {description: 'Order E', total: 10}
-    ];
+    app.models.Customer.find(function(err, customers) {
+      if (err) throw err;
 
-    var count = orders.length;
+      var orders = [
+        {description: 'Order A', total: 200.45, customerId: customers[0].id},
+        {description: 'Order B', total: 100,    customerId: customers[0].id},
+        {description: 'Order C', total: 350.45, customerId: customers[0].id},
+        {description: 'Order D', total: 150.45, customerId: customers[1].id},
+        {description: 'Order E', total: 10}
+      ];
 
-    orders.forEach(function(order) {
-      app.models.Order.create(order, function(err, instance) {
-        if (err)
-          return console.log(err);
+      var count = orders.length;
 
-        console.log('Order created:', instance);
+      orders.forEach(function(order) {
+        app.models.Order.create(order, function(err, instance) {
+          if (err)
+            return console.log(err);
 
-        count--;
+          console.log('Order created:', instance);
 
-        if (count === 0)
-          console.log('done');
+          count--;
+
+          if (count === 0)
+            console.log('done');
+        });
       });
     });
   });

@@ -1,26 +1,30 @@
-var reviews = [
-  {product: 'Product1', star: 3, authorId: 1},
-  {product: 'Product2', star: 2, authorId: 2},
-  {product: 'Product5', star: 5}
-];
-
 module.exports = function(app) {
   app.dataSources.db.automigrate('Review', function(err) {
     if (err) throw err;
 
-    var count = reviews.length;
+    app.models.Customer.find(function(err, customers) {
+      if (err) throw err;
 
-    reviews.forEach(function(review) {
-      app.models.Review.create(review, function(err, instance) {
-        if (err)
-          return console.log(err);
+      var reviews = [
+        {product: 'Product1', star: 3, authorId: customers[0].id},
+        {product: 'Product2', star: 2, authorId: customers[1].id},
+        {product: 'Product5', star: 5}
+      ];
 
-        console.log('Review created:', instance);
+      var count = reviews.length;
 
-        count--;
+      reviews.forEach(function(review) {
+        app.models.Review.create(review, function(err, instance) {
+          if (err)
+            return console.log(err);
 
-        if (count === 0)
-          console.log('done');
+          console.log('Review created:', instance);
+
+          count--;
+
+          if (count === 0)
+            console.log('done');
+        });
       });
     });
   });

@@ -12,10 +12,10 @@
     <ul>
       <li><a href='/api/customers'>/api/customers</a>
       <li><a href='/api/customers?filter[fields][name]=true'>/api/customers?filter[fields][name]=true</a>
-      <li><a href='/api/customers/1'>/api/customers/1</a>
+      <li><a href='/api/customers/<%= customer.id %>'>/api/customers/<%= customer.id %></a>
       <li><a href='/api/customers/youngFolks'>/api/customers/youngFolks</a>
-      <li><a href='/api/customers/1/reviews'>/api/customers/1/reviews</a>
-      <li><a href='/api/customers/1/orders'>/api/customers/1/orders</a>
+      <li><a href='/api/customers/<%= customer.id %>/reviews'>/api/customers/<%= customer.id %>/reviews</a>
+      <li><a href='/api/customers/<%= customer.id %>/orders'>/api/customers/<%= customer.id %>/orders</a>
       <li><a href='/api/customers?filter[include]=reviews'>/api/customers?filter[include]=reviews</a>
       <li><a href='/api/customers?filter[include][reviews]=author'>/api/customers?filter[include][reviews]=author</a>
       <li><a href='/api/customers?filter[include][reviews]=author&filter[where][age]=21'>/api/customers?filter[include][reviews]=author&filter[where][age]=21</a>
