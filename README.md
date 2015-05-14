@@ -1,4 +1,4 @@
-#loopback-example-relations
+# loopback-example-relations
 
 ```
 $ git clone https://github.com/strongloop/loopback-example-relations.git
@@ -7,39 +7,31 @@ $ npm install
 $ node .
 ```
 
-In this example, we create a simple web application to demonstrate basic model
-relation concepts in LoopBack. The app consists of boot scripts that are used to
-insert sample data and a web page with links that help us query and filter the
-inserted data via REST.
+In this example, we create a simple web app to demonstrate basic model relation
+concepts.
 
-- [Prerequisites](#prerequisites)
-- [Procedure](#procedure)
-  - [1. Create the application](#1-create-the-application)
-  - [2. Create the models](#2-create-the-models)
-  - [3. Configure server-side views](#3-configure-server-side-views)
-  - [4. Add sample data](#4-add-sample-data)
-  - [5. Create model relations](#5-create-model-relations)
-  - [6. Try the API](#6-try-the-api)
-  - [7. Conclusion](#7-conclusion)
+1. We will create some boot scripts to help us insert sample data
+2. We will create a simple web page to help us query and fileter the inserted
+   data via REST
 
-##Prerequisites
+## Prerequisites
 
-###Tutorials
+### Tutorials
 
 - [Getting started with LoopBack](https://github.com/strongloop/loopback-getting-started)
 - [Tutorial series - Step 1](https://github.com/strongloop/loopback-example#step1)
 
-###Knowledge
+### Knowledge
 
 - [LoopBack boot scripts](http://docs.strongloop.com/display/LB/Defining+boot+scripts)
 - [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
 - [Loopback model relations](http://docs.strongloop.com/display/LB/Define+model+relations)
 
-##Procedure
+## Procedure
 
-###Create the application
+### Create the application
 
-####Application information
+#### Application information
 
 - Name: `loopback-example-model-relations`
 - Directory to contain the project: `loopback-example-model-relations`
@@ -50,9 +42,9 @@ $ slc loopback loopback-example-model-relations
 $ cd loopback-example-model-relations
 ```
 
-###Create the models
+### Create the models
 
-####Model information
+#### Model information
 
 - Name: `Customer`
   - Data source: `db (memory)`
@@ -96,7 +88,7 @@ $ slc loopback:model Customer
 ... # follow the prompts, repeat for `Review` and `Order` models
 ```
 
-###Configure server-side views
+### Configure server-side views
 
 > LoopBack comes preconfigured with EJS out-of-box. This means we can use
 > server-side templating by simply setting the proper view engine and a
@@ -115,7 +107,7 @@ Create [`index.ejs` in the views directory](/server/views/index.ejs).
 [Configure `server.js`](/server/server.js#L11-L20) to use server-side
 templating. Remember to import the [`path`](/server/server.js#L3) package.
 
-###Add sample data
+### Add sample data
 
 Create three boot scripts:
 
@@ -123,9 +115,9 @@ Create three boot scripts:
 - [`sample-orders.js`](/server/boot/sample-orders.js)
 - [`sample-reviews.js`](/server/boot/sample-reviews.js)
 
-###Create model relations
+### Create model relations
 
-####Model relation information
+#### Model relation information
 
 - `Customer`
   - has many
@@ -158,7 +150,7 @@ $ slc loopback:relation
 > LoopBack [automatically derives](http://docs.strongloop.com/display/LB/BelongsTo+relations#BelongsTorelations-Overview)
 > relation and foreign key names when you leave the values empty.
 
-###Try the API
+### Try the API
 
 Start the application with `node .` and browse to [`localhost:3000`][localhost].
 You should see various links. Each endpoint is defined as follows:

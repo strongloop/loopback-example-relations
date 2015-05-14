@@ -1,5 +1,5 @@
 {
-  "name": "loopback-example-model-relations",
+  "name": "loopback-example-relations",
   "version": "0.0.0",
   "main": "server/server.js",
   "scripts": {
