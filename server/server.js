@@ -15,8 +15,11 @@ app.set('json spaces', 2); // format json responses for easier viewing
 // the project root
 app.set('views', path.resolve(__dirname, 'views'));
 
-app.use('/', function(req, res) {
-  res.render('index');
+app.use('/', function(req, res, next) {
+  app.models.Customer.findOne(function(err, customer) {
+    if (err) return next(err);
+    res.render('index', {customer: customer});
+  });
 });
 
 app.start = function() {
