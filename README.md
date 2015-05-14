@@ -7,12 +7,9 @@ $ npm install
 $ node .
 ```
 
-In this example, we create a simple web app to demonstrate basic model relation
-concepts. We will:
-
-1. Create some boot scripts to help us insert sample data
-2. Create a simple web page to help us query and filter the inserted data via
-   REST
+In this example, we will be creating a web app to demonstrate basic model
+relation concepts. The app is one web page with a list of links to help us query
+and filter sample data via REST.
 
 ## Prerequisites
 
