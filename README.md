@@ -8,11 +8,11 @@ $ node .
 ```
 
 In this example, we create a simple web app to demonstrate basic model relation
-concepts.
+concepts. We will:
 
-1. We will create some boot scripts to help us insert sample data
-2. We will create a simple web page to help us query and filter the inserted
-   data via REST
+1. Create some boot scripts to help us insert sample data
+2. Create a simple web page to help us query and filter the inserted data via
+   REST
 
 ## Prerequisites
 
