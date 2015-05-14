@@ -11,7 +11,7 @@ In this example, we create a simple web app to demonstrate basic model relation
 concepts.
 
 1. We will create some boot scripts to help us insert sample data
-2. We will create a simple web page to help us query and fileter the inserted
+2. We will create a simple web page to help us query and filter the inserted
    data via REST
 
 ## Prerequisites
