@@ -1,10 +1,11 @@
 {
   "name": "loopback-example-relations",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "test": "mocha -R spec test",
-    "pretest": "jshint ."
+    "pretest": "jshint .",
+    "start": "node .",
+    "test": "mocha -R spec test"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -22,6 +23,10 @@
     "supertest": "~0.13.0",
     "jshint": "^2.5.6",
     "mocha": "^1.20.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/loopback-example-relations"
   },
   "license": "MIT"
 }
