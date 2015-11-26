@@ -11,14 +11,20 @@
   },
   "parse": {
   },
-  "routes": {
+  "routes:before": {
+    "loopback#rest": {
+      "paths": ["${restApiRoot}"]
+    }
   },
   "files": {
+    "serve-static": {
+      "params": "$!../client"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}
   },
   "final:after": {
-    "errorhandler": {}
+    "loopback#errorHandler": {}
   }
 }
