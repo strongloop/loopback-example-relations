@@ -8,7 +8,7 @@ module.exports = function(app) {
     state: 'CA',
     zipCode: '95131'
   };
-  Customer.create({ name: 'John Smith' }, function(err, customer) {
+  Customer.create({name: 'John Smith'}, function(err, customer) {
     console.log('Customer:', customer);
     customer.address.create(address, function(err, address) {
       console.log('Address:', address);

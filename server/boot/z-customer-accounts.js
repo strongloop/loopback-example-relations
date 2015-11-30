@@ -12,7 +12,7 @@ module.exports = function(app) {
       balance: 2000
     }
   ];
-  Customer.create({ name: 'Mary Smith' }, function(err, customer) {
+  Customer.create({name: 'Mary Smith'}, function(err, customer) {
     console.log('Customer:', customer);
     async.each(accounts, function(account, done) {
       customer.accounts.create(account, done);

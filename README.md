@@ -188,7 +188,7 @@ Create [`index.ejs` in the views directory](/server/views/index.ejs).
 [Configure `server.js`](/server/server.js#L5-L11) to use server-side
 templating. Remember to import the [`path`](/server/server.js#L3) package.
 
-### Relpace root
+### Replace root
 
 Replace the default `root.js` with [a new one](/server/boot/root.js) which passes a given customer's id to template engine.
 
@@ -202,6 +202,7 @@ Create six boot scripts:
 - [`z-customer-accounts.js`](/server/boot/z-customer-accounts.js)
 - [`z-customer-address.js`](/server/boot/z-customer-address.js)
 - [`z-customer-emails.js`](/server/boot/z-customer-emails.js)
+> We add z- in front of the boot script names to make sure they load last since LoopBack boot loads boot scripts alphabetically.
 
 ### Create model relations
 

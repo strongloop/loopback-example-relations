@@ -89,8 +89,7 @@ describe('REST API request', function() {
   });
 
   it('should return customer address', function(done) {
-    json('get',
-    '/api/customers/2/address')
+    json('get', '/api/customers/2/address')
       .expect(200, function(err,res){
         assert(res.body.street);
         assert(res.body.city);
@@ -102,8 +101,7 @@ describe('REST API request', function() {
   });
 
   it('should return customer emails', function(done) {
-    json('get',
-    '/api/customers/3/emails')
+    json('get', '/api/customers/3/emails')
       .expect(200, function(err,res){
         assert(Array.isArray(res.body));
         assert(res.body[0].label);
@@ -115,8 +113,7 @@ describe('REST API request', function() {
   });
 
   it('should return customer accounts', function(done) {
-    json('get',
-    '/api/customers/1/accounts')
+    json('get', '/api/customers/1/accounts')
       .expect(200, function(err,res){
         assert(Array.isArray(res.body));
         assert(res.body[0].name);
@@ -127,8 +124,7 @@ describe('REST API request', function() {
   });
 
   it('should return accounts number', function(done) {
-    json('get',
-    '/api/customers/1/accounts/count')
+    json('get', '/api/customers/1/accounts/count')
       .expect(200, function(err,res){
         assert.equal(res.body.count, 2);
         done();
@@ -136,8 +132,7 @@ describe('REST API request', function() {
   });
 
   it('should return people linked to book', function(done) {
-    json('get',
-    '/api/books/1/people')
+    json('get', '/api/books/1/people')
       .expect(200, function(err,res){
         assert(Array.isArray(res.body));
         assert(res.body[0].id);
@@ -150,8 +145,7 @@ describe('REST API request', function() {
   });
 
   it('should return book author', function(done) {
-    json('get',
-    '/api/books/1/people/1')
+    json('get', '/api/books/1/people/1')
       .expect(200, function(err,res){
         assert.equal(res.body.linkedType, 'Author');
         done();

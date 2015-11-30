@@ -10,21 +10,21 @@ module.exports = function(app) {
   var reader;
   async.series([
     function createAuthor(done) {
-      Author.create({ name: 'Author 1' }, function(err, p) {
+      Author.create({name: 'Author 1'}, function(err, p) {
         author = p;
         done(err, p);
       });
     },
     function createReader(done) {
-      Reader.create({ name: 'Reader 1' }, function(err, p) {
+      Reader.create({name: 'Reader 1'}, function(err, p) {
         reader = p;
         done(err, p);
       });
     },
     function createBook(done) {
-      Book.create({ name: 'Book 1' }, function(err, b) {
+      Book.create({name: 'Book 1'}, function(err, b) {
         book = b;
-        var link1 = book.people.build({notes: 'Note 1' });
+        var link1 = book.people.build({notes: 'Note 1'});
         link1.linked(author);
         var link2 = book.people.build({notes: 'Note 2'});
         link2.linked(reader);
@@ -32,6 +32,6 @@ module.exports = function(app) {
         book.save(done);
       });
     }], function(err) {
-    console.log('done');
+      console.log('done');
   });
 };

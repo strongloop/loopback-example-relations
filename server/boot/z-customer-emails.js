@@ -12,7 +12,7 @@ module.exports = function(app) {
       address: 'larry@gmail.com'
     }
   ];
-  Customer.create({ name: 'Larry Smith' }, function(err, customer) {
+  Customer.create({name: 'Larry Smith'}, function(err, customer) {
     console.log('Customer:', customer);
     async.each(emails, function(email, done) {
       customer.emails.create(email, done);
@@ -40,7 +40,7 @@ module.exports = function(app) {
             done();
           });
         }], function(err) {
-        console.log('Customer with emails:', customer);
+          console.log('Customer with emails:', customer);
       });
     });
   });
