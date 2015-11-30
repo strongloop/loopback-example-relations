@@ -7,7 +7,7 @@ $ npm install
 $ node .
 ```
 
-In this example, we create a simple web app to demonstrate basic model relation
+In this example, we create a simple web app to demonstrate model relation
 concepts. The app consists of a single web page with a list of links to help us
 query and filter sample data via REST.
 
@@ -23,7 +23,7 @@ query and filter sample data via REST.
 - [LoopBack boot scripts](http://docs.strongloop.com/display/LB/Defining+boot+scripts)
 - [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
 - [Loopback model relations](http://docs.strongloop.com/display/LB/Define+model+relations)
-- [Create loopback model relations](https://docs.strongloop.com/display/public/LB/Creating+model+relations)
+- [Creating loopback model relations](https://docs.strongloop.com/display/public/LB/Creating+model+relations)
 
 ## Procedure
 
@@ -31,32 +31,29 @@ query and filter sample data via REST.
 
 #### Application information
 
+- Name: `loopback-example-model-relations`
+- Directory to contain the project: `loopback-example-model-relations`
+
 ```
 $ slc loopback loopback-example-model-relations
 ... # follow the prompts
-- Name: `loopback-example-model-relations`
-- Directory to contain the project: `loopback-example-model-relations`
 $ cd loopback-example-model-relations
 ```
+
 ### Create the datasource
 
+- Name: `transient`
+- Connector: `other`
+  - Name: `transient`
+  
 ```
 $ slc loopback:datasource
 ... # follow the prompts, choose `other` to define custom connctor
 ```
-- Name: `transient`
-- Connector: `other`
-  - Name: `transient`
 
 ### Create the models
 
 #### Model information
-
-```
-$ slc loopback:model Customer
-... # follow the prompts, repeat for other models
-```
-> Upper-case in model's name would be interpreted as '-' in model's file name, eg: EmailAddress has `email-address.json`
 
 - Name: `Customer`
   - Data source: `db (memory)`
@@ -168,6 +165,12 @@ $ slc loopback:model Customer
       - String
       - Not Required
 
+```
+$ slc loopback:model Customer
+... # follow the prompts, repeat for other models
+```
+> Upper-case in model's name would be interpreted as '-' in model's file name, eg: EmailAddress has `email-address.json`
+
 ### Configure server-side views
 
 > LoopBack comes preconfigured with EJS out-of-box. This means we can use
@@ -201,16 +204,6 @@ Create six boot scripts:
 - [`z-customer-emails.js`](/server/boot/z-customer-emails.js)
 
 ### Create model relations
-
-```
-$ slc loopback:relation
-? Select the model to create the relationship from:
-...
-> Customer
-... # follow the prompts, repeat for other models
-```
-
-> Some relations are not available in `slc`, please add them in `modelname.json` manually.
 
 #### Model relation information
 
@@ -284,6 +277,15 @@ $ slc loopback:relation
       - Property name for the relation: *Leave blank - defaults to `customer`*
       - Custom foreign key: *Leave blank*
 
+```
+$ slc loopback:relation
+? Select the model to create the relationship from:
+...
+> Customer
+... # follow the prompts, repeat for other models
+```
+
+> Some relations are not available in `slc`, please add them in `modelname.json` manually.
 > LoopBack [automatically derives](http://docs.strongloop.com/display/LB/BelongsTo+relations#BelongsTorelations-Overview)
 > relation and foreign key names when you leave the values empty.
 
