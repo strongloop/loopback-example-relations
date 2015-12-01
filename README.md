@@ -289,7 +289,7 @@ $ slc loopback:relation
 ... # follow the prompts, repeat for other models
 ```
 
-> Some relations are not available in `slc`, please add them in `modelname.json` manually.
+> Some relations are not available in `slc`, please add them in `model-name.json` manually.
 > LoopBack [automatically derives](http://docs.strongloop.com/display/LB/BelongsTo+relations#BelongsTorelations-Overview)
 > relation and foreign key names when you leave the values empty.
 
