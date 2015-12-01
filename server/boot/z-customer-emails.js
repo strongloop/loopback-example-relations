@@ -39,9 +39,10 @@ module.exports = function(app, cb) {
           customer.emails.unset(id1, function(err) {
             done();
           });
-        }], function(err) {
-          console.log('Customer with emails:', customer);
-          cb(err);
+        }
+      ], function(err) {
+        console.log('Customer with emails:', customer);
+        cb(err);
       });
     });
   });

@@ -205,6 +205,7 @@ Create six boot scripts:
 - [`z-customer-accounts.js`](/server/boot/z-customer-accounts.js)
 - [`z-customer-address.js`](/server/boot/z-customer-address.js)
 - [`z-customer-emails.js`](/server/boot/z-customer-emails.js)
+
 > We add z- in front of the boot script names to make sure they load last since LoopBack boot loads boot scripts alphabetically.
 
 ### Create model relations
