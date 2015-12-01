@@ -184,6 +184,9 @@ $ mkdir server/views
 ```
 
 Create [`index.ejs` in the views directory](/server/views/index.ejs).
+Create [`account.ejs` in the views directory](/server/views/account.ejs).
+Create [`email.ejs` in the views directory](/server/views/email.ejs).
+Create [`address.ejs` in the views directory](/server/views/address.ejs).
 
 [Configure `server.js`](/server/server.js#L5-L11) to use server-side
 templating. Remember to import the [`path`](/server/server.js#L3) package.

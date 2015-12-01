@@ -1,6 +1,6 @@
 var async = require('async');
 
-module.exports = function(app) {
+module.exports = function(app, cb) {
   var Customer = app.models.Customer;
   var accounts = [
     {
@@ -19,6 +19,7 @@ module.exports = function(app) {
     }, function(err) {
       console.log('Customer with accounts:', customer);
       customer.accounts(console.log);
+      cb(err);
     });
   });
 };

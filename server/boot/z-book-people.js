@@ -1,6 +1,6 @@
 var async = require('async');
 
-module.exports = function(app) {
+module.exports = function(app, cb) {
   var Book = app.models.Book;
   var Author = app.models.Author;
   var Reader = app.models.Reader;
@@ -33,5 +33,6 @@ module.exports = function(app) {
       });
     }], function(err) {
       console.log('done');
+      cb(err);
   });
 };
