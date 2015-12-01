@@ -1,9 +1,9 @@
 module.exports = function(app) {
   var Customer = app.models.Customer;
+  var Order = app.models.Order;
 
   // define a custom scope
   Customer.scope('youngFolks', {where: {age: {lte: 22 }}});
-
   app.dataSources.db.automigrate('Customer', function(err) {
     if (err) throw err;
 
@@ -12,22 +12,70 @@ module.exports = function(app) {
       {name: 'Customer B', age: 22},
       {name: 'Customer C', age: 23},
       {name: 'Customer D', age: 24},
-      {name: 'Customer E', age: 25}
+      {age: 25}
+      ];
+    var orders = [
+      {
+        description: 'First order by Customer A',
+        date: '01-01-2015'
+      },
+      {
+        description: 'Second order by Customer A',
+        date: '02-01-2015'
+      },
+      {
+        description: 'Order by Customer B',
+        date: '03-01-2015'
+      },
+      {
+        description: 'Order by Customer C',
+        date: '04-01-2015'
+      },
+      {
+        description: 'Order by Anonymous',
+        date: '05-01-2015'
+      }
     ];
 
-    var count = customers.length;
-
-    customers.forEach(function(customer) {
-      Customer.create(customer, function(err, instance) {
-        if (err)
-          return console.log(err);
-
-        console.log('Customer created:', instance);
-
-        count--;
-
-        if (count === 0)
-          console.log('Done');
+    // Create customers and orders
+    Customer.create(customers[0], function(err, instance) {
+      if (err) return console.error(err);
+      console.log('Customter created: ', instance);
+      orders[0].customerId = instance.id;
+      orders[1].customerId = instance.id;
+      Order.create(orders[0], function(err, instance) {
+        if (err) return console.error(err);
+        console.log('Order created: ', instance);
+      });
+      Order.create(orders[1], function(err, instance) {
+        if (err) return console.error(err);
+        console.log('Order created: ', instance);
+      });
+    });
+    Customer.create(customers[1], function(err, instance) {
+      if (err) return console.error(err);
+      console.log('Customter created: ', instance);
+      orders[2].customerId = instance.id;
+      Order.create(orders[2], function(err, instance) {
+        if (err) return console.error(err);
+        console.log('Order created: ', instance);
+      });
+    });
+    Customer.create(customers[2], function(err, instance) {
+      if (err) return console.error(err);
+      console.log('Customter created: ', instance);
+      orders[3].customerId = instance.id;
+      Order.create(orders[3], function(err, instance) {
+        if (err) return console.error(err);
+        console.log('Order created: ', instance);
+      });
+    });
+    Customer.create(customers[3], function(err, instance) {
+      if (err) return console.error(err);
+      console.log('Customter created: ', instance);
+      Order.create(orders[4], function(err, instance) {
+        if (err) return console.error(err);
+        console.log('Order created: ', instance);
       });
     });
   });
