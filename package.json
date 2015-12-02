@@ -9,7 +9,6 @@
     "test": "mocha -R spec test"
   },
   "dependencies": {
-    "async": "^0.9.0",
     "compression": "^1.0.3",
     "ejs": "^2.0.8",
     "errorhandler": "^1.1.1",
