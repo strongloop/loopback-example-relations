@@ -200,7 +200,6 @@ Replace the default `root.js` with [a new one](/server/boot/root.js) which passe
 Create six boot scripts:
 
 - [`sample-customers.js`](/server/boot/sample-customers.js)
-- [`sample-orders.js`](/server/boot/sample-orders.js)
 - [`z-book-people.js`](/server/boot/z-book-people.js)
 - [`z-customer-accounts.js`](/server/boot/z-customer-accounts.js)
 - [`z-customer-address.js`](/server/boot/z-customer-address.js)
