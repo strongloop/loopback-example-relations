@@ -33,7 +33,7 @@
     "accounts": {
       "type": "referencesMany",
       "model": "Account",
-      "property": "accountIds",
+      "foreignKey": "accountIds",
       "options": {
         "validate": true,
         "forceId": false
