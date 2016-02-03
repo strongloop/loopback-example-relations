@@ -344,9 +344,4 @@ You should see various links. Each endpoint is defined as follows:
 
 ---
 
-- [Next tutorial][next-tutorial]
-- [All tutorials][all-tutorials]
-
-[all-tutorials]: https://github.com/strongloop/loopback-example
-[localhost]: http://localhost:3000
-[next-tutorial]: https://github.com/strongloop/loopback-example-app-logic
+[More LoopBack examples](https://github.com/strongloop/loopback-example)
