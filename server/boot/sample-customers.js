@@ -40,7 +40,7 @@ module.exports = function(app) {
     // Create customers and orders
     Customer.create(customers[0], function(err, instance) {
       if (err) return console.error(err);
-      console.log('Customter created: ', instance);
+      console.log('Customer created: ', instance);
       orders[0].customerId = instance.id;
       orders[1].customerId = instance.id;
       Order.create(orders[0], function(err, instance) {
@@ -54,7 +54,7 @@ module.exports = function(app) {
     });
     Customer.create(customers[1], function(err, instance) {
       if (err) return console.error(err);
-      console.log('Customter created: ', instance);
+      console.log('Customer created: ', instance);
       orders[2].customerId = instance.id;
       Order.create(orders[2], function(err, instance) {
         if (err) return console.error(err);
@@ -63,7 +63,7 @@ module.exports = function(app) {
     });
     Customer.create(customers[2], function(err, instance) {
       if (err) return console.error(err);
-      console.log('Customter created: ', instance);
+      console.log('Customer created: ', instance);
       orders[3].customerId = instance.id;
       Order.create(orders[3], function(err, instance) {
         if (err) return console.error(err);
@@ -72,7 +72,7 @@ module.exports = function(app) {
     });
     Customer.create(customers[3], function(err, instance) {
       if (err) return console.error(err);
-      console.log('Customter created: ', instance);
+      console.log('Customer created: ', instance);
       Order.create(orders[4], function(err, instance) {
         if (err) return console.error(err);
         console.log('Order created: ', instance);
