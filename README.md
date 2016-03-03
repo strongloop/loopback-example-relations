@@ -45,7 +45,7 @@ $ cd loopback-example-model-relations
 - Name: `transient`
 - Connector: `other`
   - Name: `transient`
-  
+
 ```
 $ slc loopback:datasource
 ... # follow the prompts, choose `other` to define custom connctor
@@ -177,33 +177,33 @@ $ slc loopback:model Customer
 > server-side templating by simply setting the proper view engine and a
 > directory to store the views.
 
-Create a [`views` directory](/server/views) to store server-side templates.
+Create a [`views` directory](https://github.com/strongloop/loopback-example-relations/blob/master/server/views) to store server-side templates.
 
 ```
 $ mkdir server/views
 ```
 
-Create [`index.ejs` in the views directory](/server/views/index.ejs).
-Create [`account.ejs` in the views directory](/server/views/account.ejs).
-Create [`email.ejs` in the views directory](/server/views/email.ejs).
-Create [`address.ejs` in the views directory](/server/views/address.ejs).
+Create [`index.ejs` in the views directory](https://github.com/strongloop/loopback-example-relations/blob/master/server/views/index.ejs).
+Create [`account.ejs` in the views directory](https://github.com/strongloop/loopback-example-relations/blob/master/server/views/account.ejs).
+Create [`email.ejs` in the views directory](https://github.com/strongloop/loopback-example-relations/blob/master/server/views/email.ejs).
+Create [`address.ejs` in the views directory](https://github.com/strongloop/loopback-example-relations/blob/master/server/views/address.ejs).
 
-[Configure `server.js`](/server/server.js#L5-L11) to use server-side
-templating. Remember to import the [`path`](/server/server.js#L3) package.
+[Configure `server.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/server.js#L5-L11) to use server-side
+templating. Remember to import the [`path`](https://github.com/strongloop/loopback-example-relations/blob/master/server/server.js#L3) package.
 
 ### Replace root
 
-Replace the default `root.js` with [a new one](/server/boot/root.js) which passes a given customer's id to template engine.
+Replace the default `root.js` with [a new one](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/root.js) which passes a given customer's id to template engine.
 
 ### Add sample data
 
 Create six boot scripts:
 
-- [`sample-customers.js`](/server/boot/sample-customers.js)
-- [`z-book-people.js`](/server/boot/z-book-people.js)
-- [`z-customer-accounts.js`](/server/boot/z-customer-accounts.js)
-- [`z-customer-address.js`](/server/boot/z-customer-address.js)
-- [`z-customer-emails.js`](/server/boot/z-customer-emails.js)
+- [`sample-customers.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/sample-customers.js)
+- [`z-book-people.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/z-book-people.js)
+- [`z-customer-accounts.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/z-customer-accounts.js)
+- [`z-customer-address.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/z-customer-address.js)
+- [`z-customer-emails.js`](https://github.com/strongloop/loopback-example-relations/blob/master/server/boot/z-customer-emails.js)
 
 > We add z- in front of the boot script names to make sure they load last since LoopBack boot loads boot scripts alphabetically.
 
