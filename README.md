@@ -31,13 +31,13 @@ query and filter sample data via REST.
 
 #### Application information
 
-- Name: `loopback-example-model-relations`
-- Directory to contain the project: `loopback-example-model-relations`
+- Name: `loopback-example-relations`
+- Directory to contain the project: `loopback-example-relations`
 
 ```
-$ slc loopback loopback-example-model-relations
+$ slc loopback loopback-example-relations
 ... # follow the prompts
-$ cd loopback-example-model-relations
+$ cd loopback-example-relations
 ```
 
 ### Create the datasource
