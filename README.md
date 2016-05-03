@@ -48,7 +48,7 @@ $ cd loopback-example-relations
 
 ```
 $ slc loopback:datasource
-... # follow the prompts, choose `other` to define custom connctor
+... # follow the prompts, choose `other` to define custom connector
 ```
 
 ### Create the models
