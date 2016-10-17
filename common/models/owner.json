@@ -1,0 +1,19 @@
+{
+  "name": "Owner",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "homes": {
+      "type": "hasMany",
+      "model": "Home",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

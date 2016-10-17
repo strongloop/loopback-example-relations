@@ -1,0 +1,23 @@
+{
+  "name": "Room",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "size": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "home": {
+      "type": "belongsTo",
+      "model": "Home",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

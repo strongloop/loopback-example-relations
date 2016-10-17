@@ -61,5 +61,17 @@
   "Order": {
     "dataSource": "db",
     "public": true
+  },
+  "Owner": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Home": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Room": {
+    "dataSource": "db",
+    "public": true
   }
 }
