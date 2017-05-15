@@ -2,13 +2,22 @@
   "name": "Author",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
     "name": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "pictures": {
+      "type": "hasMany",
+      "model": "Picture",
+      "polymorphic": "imageable"
+    }
+  },
   "acls": [],
   "methods": {}
 }

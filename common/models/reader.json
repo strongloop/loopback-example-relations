@@ -2,13 +2,26 @@
   "name": "Reader",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
     "name": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "pictures": {
+      "type": "hasMany",
+      "model": "Picture",
+      "polymorphic": {
+        "reference": "imageable",
+        "foreignKey": "imageableId",
+        "discriminator": "imageableType"
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

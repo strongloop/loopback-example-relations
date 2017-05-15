@@ -1,20 +1,20 @@
 {
-  "name": "Book",
+  "name": "Picture",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
-    "name": {
+    "url": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "people": {
-      "type": "embedsMany",
-      "model": "Link",
-      "scope": {
-        "include": "linked"
-      }
+    "imageable": {
+      "type": "belongsTo",
+      "polymorphic": true
     }
   },
   "acls": [],

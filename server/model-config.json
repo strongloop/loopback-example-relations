@@ -5,6 +5,12 @@
       "loopback/server/models",
       "../common/models",
       "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
     ]
   },
   "User": {
@@ -26,39 +32,15 @@
     "dataSource": "db",
     "public": false
   },
-  "Customer": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Address": {
-    "dataSource": "transient",
-    "public": false
-  },
-  "EmailAddress": {
-    "dataSource": "transient",
-    "public": false
-  },
-  "Account": {
-    "dataSource": "db",
-    "public": false
-  },
   "Author": {
     "dataSource": "db",
-    "public": false
+    "public": true
   },
   "Reader": {
     "dataSource": "db",
-    "public": false
-  },
-  "Book": {
-    "dataSource": "db",
     "public": true
   },
-  "Link": {
-    "dataSource": "transient",
-    "public": false
-  },
-  "Order": {
+  "Picture": {
     "dataSource": "db",
     "public": true
   }
