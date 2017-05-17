@@ -1,5 +1,5 @@
 {
-  "name": "Reader",
+  "name": "Article",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -15,11 +15,7 @@
     "pictures": {
       "type": "hasMany",
       "model": "Picture",
-      "polymorphic": {
-        "reference": "imageable",
-        "foreignKey": "imageableId",
-        "discriminator": "imageableType"
-      }
+      "polymorphic": "imageable"
     }
   },
   "acls": [],

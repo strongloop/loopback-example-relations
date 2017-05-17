@@ -4,6 +4,7 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
+      "../common/models/polymorphic/hasMany",
       "./models"
     ],
     "mixins": [
@@ -32,15 +33,19 @@
     "dataSource": "db",
     "public": false
   },
-  "Author": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Reader": {
-    "dataSource": "db",
-    "public": true
-  },
   "Picture": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ImageLink": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Article": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Employee": {
     "dataSource": "db",
     "public": true
   }

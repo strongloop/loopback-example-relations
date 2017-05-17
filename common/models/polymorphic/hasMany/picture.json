@@ -1,21 +1,20 @@
 {
-  "name": "Author",
+  "name": "Picture",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "url": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "pictures": {
-      "type": "hasMany",
-      "model": "Picture",
-      "polymorphic": "imageable"
+    "imageable": {
+       "type": "belongsTo",
+       "polymorphic": true
     }
   },
   "acls": [],

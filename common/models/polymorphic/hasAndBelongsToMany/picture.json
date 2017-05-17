@@ -1,0 +1,32 @@
+{
+  "name": "Picture",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "articles": {
+      "type": "hasMany",
+      "model": "Article",
+      "through": "ImageLink",
+      "invert": true,
+      "polymorphic": "imageable"
+    },
+    "employees": {
+      "type": "hasMany",
+      "model": "Employee",
+      "through": "ImageLink",
+      "invert": true,
+      "polymorphic": "imageable"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

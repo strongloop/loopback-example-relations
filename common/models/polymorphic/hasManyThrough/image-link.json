@@ -1,17 +1,22 @@
 {
-  "name": "Picture",
+  "name": "ImageLink",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "url": {
-      "type": "string"
+    "isPublic": {
+      "type": "boolean"
     }
   },
   "validations": [],
   "relations": {
+    "picture": {
+      "type": "belongsTo",
+      "model": "Picture",
+      "foreignKey": ""
+    },
     "imageable": {
       "type": "belongsTo",
       "polymorphic": true
