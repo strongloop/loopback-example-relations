@@ -3,16 +3,16 @@ var chalk = require('chalk');
 var util = require('util');
 
 module.exports = function hasAndBelongsToMany(server, done) {
-  var Article = server.models.Article;
-  var Employee = server.models.Employee;
-  var ImageLink = server.models.ImageLink;
-
   if (process.env.POLYMORPHIC_HAS_AND_BELONGSTO_MANY) {
     demoHasAndBelongsToMany(done);
   } else {
     done();
   }
   function demoHasAndBelongsToMany(done) {
+    var Article = server.models.Article;
+    var Employee = server.models.Employee;
+    var ImageLink = server.models.ImageLink;
+
     var article1 = {name: 'Article 1'};
     var employee1 = {name: 'Employee 1'};
     var pictureArt = {url: 'url_of_picture_of_article_1'};

@@ -40,3 +40,4 @@ The demo printed out is written in boot script.
 
 - Will load the model-config dynamically
 - I am considering how to make it a giant app that contains all features
+- Add demo of api of `Picture` model
