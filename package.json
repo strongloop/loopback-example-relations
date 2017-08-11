@@ -2,6 +2,9 @@
   "name": "loopback-example-relations",
   "version": "1.0.0",
   "description": "LoopBack model relations example",
+  "engines": {
+    "node": ">=4"
+  },
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint .",
