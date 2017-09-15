@@ -1,5 +1,5 @@
 {
-  "name": "Order",
+  "name": "Shipment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -15,14 +15,9 @@
   },
   "validations": [],
   "relations": {
-    "customer": {
+    "order": {
       "type": "belongsTo",
-      "model": "Customer",
-      "foreignKey": ""
-    },
-    "shipments": {
-      "type": "hasMany",
-      "model": "Shipment",
+      "model": "Order",
       "foreignKey": ""
     }
   },

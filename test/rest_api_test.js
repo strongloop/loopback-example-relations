@@ -83,6 +83,19 @@ describe('REST API request', function() {
       });
   });
 
+  it('should allow nesting relations', function(done) {
+    json('get', '/api/customers/4/orders/5/shipments')
+      .expect(200, function(err, res){
+        assert(Array.isArray(res.body));
+        assert.notEqual(res.body.length, 0);
+        assert(res.body[0].description);
+        assert(res.body[0].date);
+        assert(res.body[0].id);
+        assert.equal(res.body[0].orderId, 5);
+        done();
+      });
+  });
+  
   it('should return only 2 customers', function(done) {
     json('get',
     '/api/customers?filter[include][orders]=customer&filter[limit]=2')

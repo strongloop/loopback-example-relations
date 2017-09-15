@@ -78,9 +78,14 @@ module.exports = function(app) {
     Customer.create(customers[3], function(err, instance) {
       if (err) return console.error(err);
       console.log('Customer created: ', instance);
-      Order.create(orders[4], function(err, instance) {
+      instance.orders.create(orders[4], function(err, instance) {
         if (err) return console.error(err);
         console.log('Order created: ', instance);
+        instance.shipments.create({date: new Date(), description: 'Shipment'},
+        function(err, instance) {
+          if (err) return console.error(err);
+          console.log('Shipment created: ', instance);
+        });
       });
     });
   });
