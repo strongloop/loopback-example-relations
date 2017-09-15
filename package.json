@@ -12,22 +12,22 @@
     "test": "mocha -R spec test"
   },
   "dependencies": {
-    "async": "^0.9.0",
-    "compression": "^1.0.3",
+    "async": "^2.5.0",
+    "compression": "^1.7.0",
     "cors": "^2.8.1",
     "ejs": "^2.0.8",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.12.1",
-    "loopback-connector-rest": "^1.1.4",
-    "loopback-component-explorer": "^2.1.0",
-    "serve-favicon": "^2.0.1",
+    "loopback-component-explorer": "file:../../loopback/loopback-component-explorer",
+    "loopback-connector-rest": "^3.0.0",
+    "serve-favicon": "^2.4.4",
     "serve-static": "^1.10.0",
-    "strong-error-handler": "^1.1.0"
+    "strong-error-handler": "^2.2.0"
   },
   "devDependencies": {
     "jshint": "^2.5.6",
-    "mocha": "^2.3.3",
-    "supertest": "^1.1.0"
+    "mocha": "^3.5.3",
+    "supertest": "^3.0.0"
   },
   "repository": {
     "type": "git",
