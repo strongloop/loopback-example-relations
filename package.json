@@ -33,5 +33,6 @@
     "type": "git",
     "url": "git@github.com:strongloop/loopback-example-relations.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "IBM Corp."
 }
